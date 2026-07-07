@@ -1,0 +1,68 @@
+# AI Resume Analyzer
+
+An AI-powered web application that analyzes resumes against a job description using Google Gemini AI.
+
+## Features
+
+- Upload PDF resumes
+- Compare resumes with job descriptions
+- AI-generated feedback and suggestions
+- ATS-friendly analysis
+- Responsive web interface
+
+## Tech Stack
+
+### Frontend
+- HTML
+- CSS
+- JavaScript
+
+### Backend
+- Python
+- Flask
+- Google Gemini AI
+- PyMuPDF
+
+## Live Demo
+
+Frontend:
+https://ai-resume-analyzerrrr.netlify.app/
+
+Backend API:
+https://ai-resume-analyzer-1pjt.onrender.com/
+
+## Project Structure
+
+```
+backend/
+frontend/
+README.md
+```
+
+## Installation
+
+```bash
+git clone https://github.com/ajayreddy9454-cmyk/ai-resume-analyzer.git
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Run:
+
+```bash
+python app.py
+```
+
+Open:
+
+```
+http://localhost:5000
+```
+
+## Author
+
+Ajay Reddy
