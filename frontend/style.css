@@ -1,0 +1,1268 @@
+/* ==========================================
+   GOOGLE FONT
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#0f172a;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* ==========================================
+   HIDDEN
+========================================== */
+
+.hidden{
+    display:none;
+}
+
+/* ==========================================
+   NAVBAR
+========================================== */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:80px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 8%;
+
+    background:rgba(15,23,42,.95);
+
+    backdrop-filter:blur(12px);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    z-index:1000;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:700;
+    color:#38bdf8;
+}
+
+.logo i{
+    margin-right:8px;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+}
+
+.nav-links li{
+    margin-left:35px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-size:17px;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#38bdf8;
+}
+
+/* ==========================================
+   HERO
+========================================== */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:120px 10%;
+
+    background:linear-gradient(
+        135deg,
+        #0f172a,
+        #111827,
+        #1e293b
+    );
+
+}
+
+.hero-content{
+
+    max-width:900px;
+
+}
+
+.hero h1{
+
+    font-size:72px;
+
+    line-height:1.2;
+
+    margin-bottom:25px;
+
+}
+
+.hero p{
+
+    font-size:21px;
+
+    color:#cbd5e1;
+
+    line-height:38px;
+
+    margin-bottom:45px;
+
+}
+
+/* ==========================================
+   HERO BUTTON
+========================================== */
+
+.btn{
+
+    display:inline-block;
+
+    text-decoration:none;
+
+    padding:18px 45px;
+
+    background:#2563eb;
+
+    color:white;
+
+    border-radius:50px;
+
+    font-size:20px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.btn:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-4px);
+
+    box-shadow:0 15px 35px rgba(37,99,235,.35);
+
+}
+
+/* ==========================================
+   FEATURES
+========================================== */
+
+.features{
+
+    padding:100px 8%;
+
+    background:#111827;
+
+}
+
+.features h2{
+
+    text-align:center;
+
+    font-size:48px;
+
+    margin-bottom:60px;
+
+}
+
+.feature-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:30px;
+
+}
+
+.card{
+
+    background:#1e293b;
+
+    border-radius:20px;
+
+    padding:45px 30px;
+
+    text-align:center;
+
+    border:1px solid rgba(255,255,255,.06);
+
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.4);
+
+}
+
+.card i{
+
+    font-size:48px;
+
+    color:#38bdf8;
+
+    margin-bottom:20px;
+
+}
+
+.card h3{
+
+    font-size:28px;
+
+    margin-bottom:18px;
+
+}
+
+.card p{
+
+    color:#cbd5e1;
+
+    line-height:30px;
+
+}
+/* ==========================================
+   ANALYZER SECTION
+========================================== */
+
+
+.analyzer{
+    padding:70px 8% 60px;
+    background:#0f172a;
+    text-align:center;
+}
+.analyzer h2{
+
+    font-size:58px;
+
+    margin-bottom:35px;
+
+}
+/* ===============================
+   Upload Box
+================================ */
+
+.upload-box{
+
+    width:100%;
+    max-width:650px;
+
+    margin:0 auto;
+
+    padding:25px;
+
+    background:#243244;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:22px;
+
+}
+
+.upload-box:hover{
+
+    border-color:#60a5fa;
+
+    transform:translateY(-6px);
+
+    box-shadow:0 25px 50px rgba(0,0,0,.4);
+
+}
+
+.upload-icon{
+
+    font-size:48px;
+
+    margin-bottom:15px;
+
+}
+
+.upload-box h3{
+
+    font-size:24px;
+
+    margin-bottom:8px;
+
+}
+
+.upload-text{
+
+    color:#cbd5e1;
+
+    font-size:18px;
+
+}
+
+.or-text{
+
+    display:block;
+
+       margin:12px 0;
+
+    font-weight:700;
+
+    color:#94a3b8;
+
+    letter-spacing:2px;
+
+}
+
+.upload-btn{
+
+    display:inline-block;
+
+    background:#2563eb;
+
+    color:white;
+
+    padding:16px 35px;
+
+    border-radius:50px;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    font-weight:600;
+
+}
+
+.upload-btn i{
+
+    margin-right:8px;
+
+}
+
+.upload-btn:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-4px);
+
+}
+
+#fileName{
+    margin-top:15px;
+    color:#38bdf8;
+    font-size:18px;
+    font-weight:600;
+    word-break: break-word;
+}
+.upload-note{
+
+    display:block;
+
+    margin-top:18px;
+
+    color:#94a3b8;
+
+    font-size:14px;
+
+}
+/* ==========================================
+   ANALYZE BUTTON
+========================================== */
+
+#analyzeBtn{
+    display:block;
+    width:260px;
+    margin:25px auto 0;
+    padding:15px 25px;
+    border:none;
+    border-radius:50px;
+    background:#2563eb;
+    color:#fff;
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+#analyzeBtn:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-5px);
+
+    box-shadow:0 18px 35px rgba(37,99,235,.35);
+
+}
+
+/* ==========================================
+   LOADING
+========================================== */
+
+.loading{
+
+    margin-top:35px;
+
+    text-align:center;
+
+}
+
+.loading i{
+
+    font-size:45px;
+
+    color:#38bdf8;
+
+}
+
+.loading p{
+
+    margin-top:15px;
+
+    color:#cbd5e1;
+
+}
+
+/* ==========================================
+   RESULTS
+========================================== */
+
+.results{
+
+    padding:100px 8%;
+
+    background:#111827;
+
+}
+
+.results h2{
+
+    text-align:center;
+
+    font-size:48px;
+
+    margin-bottom:60px;
+
+}
+
+.result-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:30px;
+
+}
+
+.result-card{
+
+    background:#1e293b;
+
+    border-radius:18px;
+
+    padding:35px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.35s;
+
+}
+
+.result-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.4);
+
+}
+
+.result-card h3{
+
+    color:#38bdf8;
+
+    margin-bottom:20px;
+
+    font-size:24px;
+
+}
+
+.result-card p{
+
+    font-size:20px;
+
+    font-weight:700;
+
+}
+
+.result-card ul{
+
+    margin-left:20px;
+
+    line-height:32px;
+
+    color:#cbd5e1;
+
+}
+
+/* ==========================================
+   ABOUT
+========================================== */
+
+.about{
+
+    background:#0f172a;
+
+    padding:100px 10%;
+
+    text-align:center;
+
+}
+
+.about h2{
+
+    font-size:46px;
+
+    margin-bottom:25px;
+
+}
+
+.about p{
+
+    max-width:900px;
+
+    margin:auto;
+
+    color:#cbd5e1;
+
+    font-size:18px;
+
+    line-height:34px;
+
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer{
+
+    background:#020617;
+
+    padding:35px;
+
+    text-align:center;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+footer p{
+
+    color:#94a3b8;
+
+    line-height:30px;
+
+}
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#111827;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#2563eb;
+    border-radius:10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#1d4ed8;
+}
+
+/* ==========================================
+   SECTION SPACING
+========================================== */
+
+section{
+    scroll-margin-top:90px;
+}
+
+/* ==========================================
+   SMOOTH ANIMATIONS
+========================================== */
+
+.hero-content,
+.card,
+.upload-box,
+.result-card{
+    animation:fadeUp .8s ease;
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================
+   BUTTON EFFECTS
+========================================== */
+
+.btn,
+.upload-btn,
+#analyzeBtn{
+
+    transition:.35s;
+
+}
+
+.btn:hover,
+.upload-btn:hover,
+#analyzeBtn:hover{
+
+    transform:translateY(-4px) scale(1.03);
+
+}
+
+/* ==========================================
+   RESULT CARD ANIMATION
+========================================== */
+
+.result-card{
+
+    transition:.35s;
+
+}
+
+.result-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:992px){
+
+.hero h1{
+
+    font-size:54px;
+
+}
+
+.hero p{
+
+    font-size:18px;
+
+}
+
+.features h2,
+.analyzer h2,
+.results h2,
+.about h2{
+
+    font-size:38px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.navbar{
+
+    flex-direction:column;
+
+    height:auto;
+
+    padding:20px;
+
+}
+
+.nav-links{
+
+    margin-top:20px;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+}
+
+.nav-links li{
+
+    margin:10px;
+
+}
+
+.hero{
+
+    padding:150px 8% 80px;
+
+}
+
+.hero h1{
+
+    font-size:42px;
+
+}
+
+.hero p{
+
+    font-size:17px;
+
+    line-height:30px;
+
+}
+
+.upload-box{
+
+    padding:40px 20px;
+
+}
+
+.upload-icon{
+
+    font-size:55px;
+
+}
+
+.upload-box h3{
+
+    font-size:24px;
+
+}
+
+.result-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:500px){
+
+.hero h1{
+
+    font-size:34px;
+
+}
+
+.logo{
+
+    font-size:24px;
+
+}
+
+.features h2,
+.analyzer h2,
+.results h2,
+.about h2{
+
+    font-size:30px;
+
+}
+
+.btn,
+.upload-btn,
+#analyzeBtn{
+
+    width:100%;
+
+}
+
+}
+
+/* ==========================================
+   FOOTER HOVER
+========================================== */
+
+footer p:hover{
+
+    color:white;
+
+}
+/* ==========================
+   Notification Popup
+========================== */
+
+.notification{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.65);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.notification.hidden{
+    display:none;
+}
+
+.notification-content{
+    width:420px;
+    max-width:90%;
+    background:#1f2937;
+    border:1px solid #38bdf8;
+    border-radius:15px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 15px 40px rgba(0,0,0,.5);
+}
+
+.notification-content h3{
+    color:#38bdf8;
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.notification-content p{
+    color:#ffffff;
+    font-size:18px;
+    line-height:1.6;
+    margin-bottom:25px;
+}
+
+.notification-content button{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:12px 35px;
+    border-radius:10px;
+    font-size:17px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.notification-content button:hover{
+    background:#1d4ed8;
+}
+/* ==========================================
+   ATS SCORE
+========================================== */
+
+#atsScore{
+
+    font-size:42px;
+
+    font-weight:700;
+
+    margin:20px 0;
+
+}
+
+#atsRating{
+
+    font-size:18px;
+
+    font-weight:600;
+
+    margin-bottom:20px;
+
+}
+
+/* Progress */
+
+.progress{
+
+    width:100%;
+
+    height:14px;
+
+    background:#374151;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+}
+
+#progressBar{
+
+    width:0%;
+
+    height:100%;
+
+    background:#22c55e;
+
+    transition:width 1s ease;
+
+}
+/* ==========================================
+   JOB DESCRIPTION
+========================================== */
+
+.job-description{
+
+    margin-top:30px;
+
+    text-align:left;
+
+}
+
+.job-description h3{
+
+    color:#38bdf8;
+
+    margin-bottom:12px;
+
+}
+
+#jobDescription{
+
+    width:100%;
+
+    min-height:180px;
+
+    resize:vertical;
+
+    padding:15px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:12px;
+
+    background:#1e293b;
+
+    color:white;
+
+    font-size:16px;
+
+    font-family:'Poppins',sans-serif;
+
+    line-height:1.6;
+
+    box-sizing:border-box;
+
+}
+
+#jobDescription::placeholder{
+
+    color:#94a3b8;
+
+}
+
+#jobDescription:focus{
+
+    border:2px solid #38bdf8;
+
+}
+/* ==========================================
+   JOB MATCH SCORE
+========================================== */
+
+#matchScore{
+
+    font-size:42px;
+
+    font-weight:700;
+
+    color:#38bdf8;
+
+    margin-top:20px;
+
+}
+
+/* ==========================================
+   MATCHING SKILLS
+========================================== */
+
+#matchingSkills{
+
+    list-style:none;
+
+    padding:0;
+
+    margin-top:15px;
+
+}
+
+#matchingSkills li{
+
+    background:#1e293b;
+
+    color:white;
+
+    padding:10px;
+
+    margin-bottom:10px;
+
+    border-left:4px solid #22c55e;
+
+    border-radius:8px;
+
+    transition:.3s;
+
+}
+
+#matchingSkills li:hover{
+
+    transform:translateX(5px);
+
+}
+
+/* ==========================================
+   JOB MATCH CARD
+========================================== */
+
+#matchScore{
+
+    transition:.5s;
+
+}
+/* ==========================================
+   END OF CSS
+========================================== */
+/* ==========================================
+   MOBILE RESPONSIVE
+   PART 1
+========================================== */
+
+@media (max-width:768px){
+
+    /* Navbar */
+
+    .navbar{
+
+        flex-direction:column;
+
+        gap:15px;
+
+        padding:20px;
+
+    }
+
+    .nav-links{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:15px;
+
+    }
+
+    /* Hero */
+
+  .hero{
+
+    padding:240px 20px 70px;
+
+}
+
+    .hero h1{
+
+    font-size:30px;
+    line-height:1.3;
+    text-align:center;
+
+}
+
+    .hero p{
+
+        font-size:18px;
+
+        text-align:center;
+
+    }
+
+    .hero-content{
+
+        width:100%;
+
+    }
+
+}
+/* ==========================================
+   MOBILE RESPONSIVE
+   PART 2
+========================================== */
+
+@media (max-width:768px){
+
+    /* Features */
+
+    .feature-container{
+
+        display:grid;
+
+        grid-template-columns:1fr;
+
+        gap:20px;
+
+    }
+
+    .card{
+
+        width:100%;
+
+    }
+
+    /* Upload Box */
+
+    .upload-box{
+
+        width:95%;
+
+        padding:30px 20px;
+
+    }
+
+    .upload-box h3{
+
+        font-size:28px;
+
+    }
+
+    .upload-text{
+
+        font-size:18px;
+
+    }
+
+    /* Analyze Button */
+
+    #analyzeBtn{
+
+        width:100%;
+
+    }
+
+    /* Job Description */
+
+    #jobDescription{
+
+        min-height:160px;
+
+        font-size:15px;
+
+    }
+
+}
+/* ==========================================
+   MOBILE RESPONSIVE
+   PART 3
+========================================== */
+
+@media (max-width:768px){
+
+    /* Results */
+
+    .result-grid{
+
+        display:grid;
+
+        grid-template-columns:1fr;
+
+        gap:20px;
+
+    }
+
+    .result-card{
+
+        width:100%;
+        box-sizing:border-box;
+
+    }
+
+    /* About */
+
+    .about{
+
+        padding:60px 20px;
+
+        text-align:center;
+
+    }
+
+    .about h2{
+
+        font-size:32px;
+
+    }
+
+    .about p{
+
+        font-size:16px;
+
+        line-height:1.8;
+
+    }
+
+    /* Footer */
+
+    footer{
+
+        padding:20px;
+
+        text-align:center;
+
+    }
+
+    footer p{
+
+        font-size:14px;
+
+        line-height:1.6;
+
+    }
+
+}

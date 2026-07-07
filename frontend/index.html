@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AI Resume Analyzer</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ========================================= -->
+<!-- NAVBAR -->
+<!-- ========================================= -->
+
+<nav class="navbar">
+
+    <div class="logo">
+
+        <i class="fa-solid fa-file-circle-check"></i>
+
+        AI Resume Analyzer
+
+    </div>
+
+    <ul class="nav-links">
+
+        <li><a href="#home">Home</a></li>
+
+        <li><a href="#features">Features</a></li>
+
+        <li><a href="#analyzer">Analyzer</a></li>
+
+        <li><a href="#about">About</a></li>
+
+    </ul>
+
+</nav>
+
+<!-- ========================================= -->
+<!-- HERO -->
+<!-- ========================================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <h1>
+
+            Analyze Your Resume
+             Using AI
+
+        </h1>
+
+        <p>
+
+            Upload your resume and receive an AI-powered ATS score,
+            skills analysis, missing skills, and personalized
+            improvement suggestions using Google Gemini AI.
+
+        </p>
+
+        <a href="#analyzer" class="btn">
+
+            Analyze Resume
+
+        </a>
+
+    </div>
+
+</section>
+
+<!-- ========================================= -->
+<!-- FEATURES -->
+<!-- ========================================= -->
+
+<section class="features" id="features">
+
+    <h2>
+
+        Features
+
+    </h2>
+
+    <div class="feature-container">
+
+        <div class="card">
+
+            <i class="fa-solid fa-robot"></i>
+
+            <h3>AI Analysis</h3>
+
+            <p>
+
+                 Analyze resumes with AI.
+
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-chart-simple"></i>
+
+            <h3>ATS Score</h3>
+
+            <p>
+
+                Get an estimated ATS compatibility score.
+
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-lightbulb"></i>
+
+            <h3>Suggestions</h3>
+
+            <p>
+
+                Receive AI-powered resume improvement tips.
+
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-user-check"></i>
+
+            <h3>Skills Detection</h3>
+
+            <p>
+
+                Detect existing and missing technical skills.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ========================================= -->
+<!-- ANALYZER -->
+<!-- ========================================= -->
+
+<section class="analyzer" id="analyzer">
+
+    <div class="upload-box" id="uploadBox">
+
+        <i class="fa-solid fa-file-arrow-up upload-icon"></i>
+
+        <h3>Upload Your Resume</h3>
+
+        <p class="upload-text">
+
+            Drag & Drop your Resume PDF Here
+
+        </p>
+
+        <span class="or-text">OR</span>
+
+        <label
+            for="resumeFile"
+            class="upload-btn">
+
+            <i class="fa-solid fa-folder-open"></i>
+
+            Choose PDF
+
+        </label>
+
+        <input
+            type="file"
+            id="resumeFile"
+            accept=".pdf"
+            hidden
+        >
+
+        <p id="fileName">
+
+            No file selected
+
+        </p>
+
+        <small class="upload-note">
+
+            PDF files only • Maximum size: 5 MB
+
+        </small>
+
+        <br><br>
+        <!-- ========================================= -->
+<!-- JOB DESCRIPTION -->
+<!-- ========================================= -->
+
+<div class="job-description">
+
+    <h3>
+
+        Job Description (Optional)
+
+    </h3>
+
+    <textarea
+        id="jobDescription"
+        placeholder="Paste the Job Description here...
+
+Example:
+
+Python Developer
+
+Requirements:
+- Python
+- Flask
+- SQL
+- Git
+- Docker
+- REST APIs"
+    ></textarea>
+
+</div>
+
+<br>
+
+        <button
+            id="analyzeBtn"
+            type="button">
+
+            Analyze Resume
+
+        </button>
+
+        <!-- Loading -->
+
+        <div
+            class="loading hidden"
+            id="loading">
+
+            <i class="fa-solid fa-spinner fa-spin"></i>
+
+            <p>
+
+                Analyzing Resume...
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================================= -->
+<!-- RESULTS -->
+<!-- ========================================= -->
+
+<section
+    class="results hidden"
+    id="results">
+
+    <h2>
+
+        Analysis Report
+
+    </h2>
+
+    <div class="result-grid">
+
+        <!-- ATS -->
+<div class="result-card">
+
+    <h3>ATS Score</h3>
+
+    <p id="atsScore">0 / 100</p>
+
+    <p id="atsRating"></p>
+
+    <div class="progress">
+
+        <div id="progressBar"></div>
+
+    </div>
+
+</div>
+<!-- ========================================= -->
+<!-- JOB MATCH SCORE -->
+<!-- ========================================= -->
+
+<div class="result-card">
+
+    <h3>
+
+        Job Match Score
+
+    </h3>
+
+    <p id="matchScore">
+
+        0%
+
+    </p>
+
+</div>
+
+<!-- ========================================= -->
+<!-- MATCHING SKILLS -->
+<!-- ========================================= -->
+
+<div class="result-card">
+
+    <h3>
+
+        Matching Skills
+
+    </h3>
+
+    <ul id="matchingSkills">
+
+    </ul>
+
+</div>
+        <!-- Skills -->
+
+        <div class="result-card">
+
+            <h3>
+
+                Skills Found
+
+            </h3>
+
+            <ul id="skillsFound">
+
+            </ul>
+
+        </div>
+
+        <!-- Missing -->
+
+        <div class="result-card">
+
+            <h3>
+
+                Missing Skills
+
+            </h3>
+
+            <ul id="missingSkills">
+
+            </ul>
+
+        </div>
+
+        <!-- Suggestions -->
+
+        <div class="result-card">
+
+            <h3>
+
+                Suggestions
+
+            </h3>
+
+            <ul id="suggestions">
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ========================================= -->
+<!-- ABOUT -->
+<!-- ========================================= -->
+
+<section class="about" id="about">
+
+    <h2>
+
+        About AI Resume Analyzer
+
+    </h2>
+
+    <p>
+AI Resume Analyzer is an AI-powered web application designed to 
+help students, freshers, and job seekers improve their resumes 
+before applying for jobs. It analyzes resumes using AI to 
+calculate an ATS score, identify technical skills, highlight 
+missing skills, and provide personalized recommendations to
+ improve resume quality.
+
+    </p>
+
+    <br>
+
+    <p>
+
+        <strong>Developed by:</strong>
+
+        Ajay Reddy
+
+    </p>
+
+</section>
+
+<!-- ========================================= -->
+<!-- FOOTER -->
+<!-- ========================================= -->
+
+<footer>
+
+    <p>
+
+        © 2026 AI Resume Analyzer
+
+        | Built with HTML, CSS, JavaScript, Python, Flask & Gemini AI
+
+    </p>
+
+</footer>
+
+<!-- ========================================= -->
+<!-- NOTIFICATION -->
+<!-- ========================================= -->
+
+<div
+    id="notification"
+    class="notification hidden">
+
+    <div class="notification-content">
+
+        <h3 id="notificationTitle">
+
+            Message
+
+        </h3>
+
+        <p id="notificationText">
+
+        </p>
+
+        <button
+            id="closeNotification">
+
+            OK
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ========================================= -->
+<!-- JAVASCRIPT -->
+<!-- ========================================= -->
+
+<script src="script.js"></script>
+
+</body>
+</html>
