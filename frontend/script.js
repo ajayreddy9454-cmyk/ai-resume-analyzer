@@ -148,7 +148,7 @@ formData.append(
     try {
 
         const response = await fetch(
-            https://ai-resume-analyzer-1pjt.onrender.com/analyze",
+            "https://ai-resume-analyzer-1pjt.onrender.com/analyze",
             {
                 method: "POST",
                 body: formData
